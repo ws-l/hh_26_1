@@ -5,7 +5,7 @@ from PIL import Image
 
 st.title("API 연결 예제")
 
-df = pd.read_json("http://localhost:8000/image")
+df = pd.read_json("http://localhost:8000/sample")
 
 img = df.drop(columns="label")
 img2 = Image.fromarray(img.values.reshape(14, 14,3).astype(np.uint8))
